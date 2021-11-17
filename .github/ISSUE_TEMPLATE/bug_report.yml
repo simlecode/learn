@@ -1,0 +1,37 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
+body:
+  - type: textarea
+    id: version
+    attributes:
+      label: Venus Version
+      description: Enter the output of `venus version` if applicable
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: Description
+    attributes:
+      label: Describe the Bug
+      description: |
+        This is where you get to tell us what went wrong, when doing so, please try to provide a clear and concise description of the bug with all related information:
+        * What you were doding when you experienced the bug?
+        * Any *error* messages you saw, *where* you saw them, and what you believe may have caused them (if you have any ideas).
+        * What is the expected behaviour?
+    validations:
+      required: true
+  - type: textarea
+    id: extraInfo
+    attributes:
+      label: Logging Information
+      render: text
+      description: |
+        Please provide debug logs of the problem, remember you can get set log level control for:
+        If you don't provide detailed logs when you raise the issue it will almost certainly be the first request I make before furthur diagnosing the problem.
+    validations:
+      required: true
