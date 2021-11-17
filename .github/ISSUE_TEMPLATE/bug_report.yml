@@ -1,6 +1,5 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
   - octocat
@@ -9,15 +8,16 @@ body:
     id: version
     attributes:
       label: Venus Version
+      render: text
       description: Enter the output of `venus version` if applicable
       placeholder: Tell us what you see!
-      value: "A bug happened!"
     validations:
       required: true
   - type: textarea
     id: Description
     attributes:
       label: Describe the Bug
+      render: text
       description: |
         This is where you get to tell us what went wrong, when doing so, please try to provide a clear and concise description of the bug with all related information:
         * What you were doding when you experienced the bug?
