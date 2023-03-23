@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func main() {
+func testMutex() {
 	var mu sync.Mutex
 
 	mu.Lock()

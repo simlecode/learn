@@ -42,9 +42,9 @@ func recoverCall() {
 	panic("")
 }
 
-//在局部作用域中，命名的返回值内同名的局部变量屏蔽：
+// 在局部作用域中，命名的返回值内同名的局部变量屏蔽：
 func Foo() (err error) {
-	if err := bar(); err != nil {
+	if err = bar(); err != nil {
 		return
 	}
 	return

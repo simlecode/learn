@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-func main() {
+func testLoop() {
 	loop()
 }
 
-func loop()  {
+func loop() {
 	var l = 1
 
 	fmt.Println("start loop")
 
 breakLoop:
-	for ;l < 10; l++ {
+	for ; l < 10; l++ {
 		fmt.Println(l)
 		if l == 8 {
 			break breakLoop

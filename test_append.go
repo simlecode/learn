@@ -2,11 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
-	//testAppend()
-}
-
-func testAppend()  {
+func testAppend() {
 	//a := make([]int,0, 3)
 	//a = append(a, 1,2)
 	//fmt.Printf("a len=%d, cap=%d\n", len(a), cap(a))
@@ -24,7 +20,6 @@ func testAppend()  {
 	//a = append(a, 5) // 切片超出容量3，进行扩容，返回新的地址，所以没有改变 c 下标是3（6）的值
 	//fmt.Printf("a len=%d, cap=%d\n", len(a), cap(a))
 	//fmt.Printf("a: %v, b: %v, c:%v, a addr: %p, b addr: %p\n", a, b, c, &a, &b)
-
 
 	var arr = []int{1, 2, 3, 4}
 	d := arr[:2]

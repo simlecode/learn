@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func main() {
+func testChannel() {
 	testSelect()
 	//testChannel()
 }
 
-func testChannel()  {
+func testChannel2() {
 	// 无缓冲channel连续写或者读会死锁
 	ch := make(chan int)
 	ch <- 1

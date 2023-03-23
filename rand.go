@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func testRand() {
 	fmt.Println(shuffle(10))
 	rand.Seed(time.Now().Unix())
 }
