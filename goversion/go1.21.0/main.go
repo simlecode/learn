@@ -4,8 +4,10 @@ import (
 	"cmp"
 	"fmt"
 	"log"
+	"log/slog"
 	"maps"
 	"math"
+	"os"
 	"slices"
 	"sync"
 )
@@ -45,6 +47,7 @@ func main() {
 	useSlices()
 	useMaps()
 	useCmp()
+	useLog()
 }
 
 func compare(num, num2 float64) (float64, float64) {
@@ -72,4 +75,17 @@ func useMaps() {
 
 func useCmp() {
 	fmt.Println("cmp:", cmp.Compare[int](1, 4))
+}
+
+func useLog() {
+	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+		AddSource: true,
+		Level:     slog.LevelInfo,
+	})))
+
+	slog.Debug("debug")
+	slog.Info("info")
+
+	l := slog.With("debug", "debug")
+	l.Info("info")
 }
